@@ -1,0 +1,33 @@
+{
+  "name": "coin-address",
+  "version": "1.0.0",
+  "description": "bip44 coin address btc bch bsv doge eth tron iost bnb eos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HFFP/CoinAddress.git"
+  },
+  "keywords": [
+    "bip44",
+    "coin",
+    "address",
+    "btc",
+    "bch",
+    "bsv",
+    "doge",
+    "eth",
+    "tron",
+    "iost",
+    "bnb",
+    "eos"
+  ],
+  "author": "hffp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HFFP/CoinAddress/issues"
+  },
+  "homepage": "https://github.com/HFFP/CoinAddress#readme"
+}
