@@ -4,7 +4,7 @@
   "description": "bip44 coin address btc bch bsv doge eth tron iost bnb eos",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --forceExit --verbose false"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,12 @@
   "bugs": {
     "url": "https://github.com/HFFP/CoinAddress/issues"
   },
-  "homepage": "https://github.com/HFFP/CoinAddress#readme"
+  "homepage": "https://github.com/HFFP/CoinAddress#readme",
+  "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.2"
+  }
 }
