@@ -36,5 +36,9 @@
     "ts-jest": "^24.1.0",
     "tslint": "^5.20.1",
     "typescript": "^3.7.2"
+  },
+  "dependencies": {
+    "bip39": "^3.0.3",
+    "bitcoinjs-lib": "^5.2.0"
   }
 }
