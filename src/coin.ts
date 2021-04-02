@@ -30,7 +30,7 @@ export abstract class Coin {
 
   abstract getAddress(account: number, index: number): string;
 
-  abstract getPrivateKey(): string;
+  abstract getPrivateKey(account: number, index: number): string;
 
-  abstract getPubKey(): string;
+  abstract getPubKey(account: number, index: number): string;
 }

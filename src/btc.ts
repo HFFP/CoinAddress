@@ -16,7 +16,7 @@ export class Btc extends Coin{
     }
   }
 
-  getAddress (account: number, index: number): string {
+  getAddress (account: number = 0, index: number = 0): string {
     const root = bitcoinjs.bip32.fromSeed(Buffer.from(this.seed.getSeed(), 'hex'));
     const path = this.getPath(account, index);
     const net = this.getNetwork(this.net);
@@ -24,12 +24,19 @@ export class Btc extends Coin{
     return bitcoinjs.payments.p2pkh({pubkey: temp.publicKey, network: net}).address as string;
   }
 
-  getPrivateKey () {
-    return ""
+  getPrivateKey (account: number = 0, index: number = 0) {
+    const net = this.getNetwork(this.net);
+    const root = bitcoinjs.bip32.fromSeed(Buffer.from(this.seed.getSeed(), 'hex'), net);
+    const path = this.getPath(account, index);
+    return root.derivePath(path).toWIF();
   }
 
-  getPubKey () {
-    return ""
+  getPubKey (account: number = 0, index:number = 0) {
+    const net = this.getNetwork(this.net);
+    const root = bitcoinjs.bip32.fromSeed(Buffer.from(this.seed.getSeed(), 'hex'), net);
+    const path = this.getPath(account, index);
+    const pubkey = root.derivePath(path).publicKey;
+    return pubkey.toString('hex');
   }
 
 }
